@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineStarPosition", "MineStarPosition\MineStarPosition.csproj", "{5A91E88B-71C6-40B5-9D28-17BF9EA1A6BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A91E88B-71C6-40B5-9D28-17BF9EA1A6BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A91E88B-71C6-40B5-9D28-17BF9EA1A6BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A91E88B-71C6-40B5-9D28-17BF9EA1A6BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A91E88B-71C6-40B5-9D28-17BF9EA1A6BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DF5435D-70F8-492A-B3DB-89771F5578F7}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,533 @@
+﻿@model IEnumerable<MineStarPosition.Models.DlCycleLog>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MachineId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConfigLogId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DigModeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartTimeStamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndTimeStamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PitName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RampName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StripName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PassName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlastId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlastProximity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TubBlockId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FillBlockId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DumpBlockId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TubEastings)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TubNorthings)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TubAltitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FillEastings)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FillNorthings)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FillAltitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FillHeading)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DumpEastings)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DumpNorthings)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DumpAltitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DumpHeading)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GpsFixQuality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GpsNumberOfSatellites)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GpsHdop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RepassCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Digability)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Payload)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GrossWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tsl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChopFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FillTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SwingTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DumpTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReturnTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpotTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CycleTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FillAngle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoistAngle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CarryAngle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DumpAngle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SwingAngle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReturnSwingAngle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DumpReach)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DumpHeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartFillHeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartFillReach)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndFillHeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndFillReach)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FillLength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VerticalHoistHeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoistVectorLength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentFullHstRefInSwg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoistVectorVelocity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DragArmIRms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrontHoistArmIRms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoistArmIRms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SwingArmIRms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvgFillDragRef)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvgFillDragVelocity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvgDragForceForSwing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvgFrontForceForSwing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvgRearForceForSwing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvgHoistForceDifference)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FillEnergy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrontHoistEnergy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecificFrontHoistEnergy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoistEnergy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecificHoistEnergy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PeakDragAmps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MachinePower)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AcMotorEnabled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SwingTorqueMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SwingTorqueMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SwingRainfall)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VibrationMetric)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StressIndex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MachineGrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetMachineElevation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MachineId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConfigLogId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DigModeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTimeStamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndTimeStamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PitName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RampName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StripName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PassName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlastId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlastProximity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TubBlockId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FillBlockId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DumpBlockId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TubEastings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TubNorthings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TubAltitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FillEastings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FillNorthings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FillAltitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FillHeading)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DumpEastings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DumpNorthings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DumpAltitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DumpHeading)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GpsFixQuality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GpsNumberOfSatellites)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GpsHdop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RepassCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Digability)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Payload)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GrossWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tsl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChopFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FillTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SwingTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DumpTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReturnTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpotTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CycleTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FillAngle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoistAngle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarryAngle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DumpAngle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SwingAngle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReturnSwingAngle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DumpReach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DumpHeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartFillHeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartFillReach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndFillHeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndFillReach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FillLength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VerticalHoistHeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoistVectorLength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PercentFullHstRefInSwg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoistVectorVelocity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DragArmIRms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrontHoistArmIRms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoistArmIRms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SwingArmIRms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgFillDragRef)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgFillDragVelocity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgDragForceForSwing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgFrontForceForSwing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgRearForceForSwing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgHoistForceDifference)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FillEnergy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrontHoistEnergy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecificFrontHoistEnergy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoistEnergy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecificHoistEnergy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PeakDragAmps)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MachinePower)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AcMotorEnabled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SwingTorqueMin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SwingTorqueMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SwingRainfall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VibrationMetric)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StressIndex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MachineGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetMachineElevation)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UniqueId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UniqueId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UniqueId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,522 @@
+﻿@model MineStarPosition.Models.DlCycleLog
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DlCycleLog</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MachineId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MachineId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ConfigLogId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ConfigLogId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DigModeId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DigModeId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartTimeStamp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartTimeStamp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EndTimeStamp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EndTimeStamp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EndTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EndTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PitName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PitName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RampName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RampName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StripName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StripName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PassName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PassName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BlastId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BlastId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BlastProximity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BlastProximity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TubBlockId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TubBlockId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FillBlockId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FillBlockId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DumpBlockId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DumpBlockId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TubEastings)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TubEastings)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TubNorthings)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TubNorthings)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TubAltitude)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TubAltitude)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FillEastings)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FillEastings)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FillNorthings)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FillNorthings)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FillAltitude)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FillAltitude)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FillHeading)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FillHeading)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DumpEastings)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DumpEastings)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DumpNorthings)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DumpNorthings)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DumpAltitude)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DumpAltitude)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DumpHeading)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DumpHeading)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GpsFixQuality)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GpsFixQuality)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GpsNumberOfSatellites)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GpsNumberOfSatellites)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GpsHdop)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GpsHdop)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RepassCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RepassCount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Digability)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Digability)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Payload)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Payload)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GrossWeight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GrossWeight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tsl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tsl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ChopFlag)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ChopFlag)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FillTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FillTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SwingTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SwingTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DumpTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DumpTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ReturnTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReturnTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SpotTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SpotTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CycleTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CycleTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FillAngle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FillAngle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoistAngle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoistAngle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CarryAngle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CarryAngle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DumpAngle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DumpAngle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SwingAngle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SwingAngle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ReturnSwingAngle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReturnSwingAngle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DumpReach)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DumpReach)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DumpHeight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DumpHeight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartFillHeight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartFillHeight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartFillReach)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartFillReach)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EndFillHeight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EndFillHeight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EndFillReach)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EndFillReach)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FillLength)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FillLength)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VerticalHoistHeight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VerticalHoistHeight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoistVectorLength)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoistVectorLength)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PercentFullHstRefInSwg)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PercentFullHstRefInSwg)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoistVectorVelocity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoistVectorVelocity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DragArmIRms)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DragArmIRms)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FrontHoistArmIRms)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FrontHoistArmIRms)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoistArmIRms)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoistArmIRms)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SwingArmIRms)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SwingArmIRms)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AvgFillDragRef)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AvgFillDragRef)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AvgFillDragVelocity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AvgFillDragVelocity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AvgDragForceForSwing)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AvgDragForceForSwing)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AvgFrontForceForSwing)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AvgFrontForceForSwing)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AvgRearForceForSwing)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AvgRearForceForSwing)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AvgHoistForceDifference)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AvgHoistForceDifference)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FillEnergy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FillEnergy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FrontHoistEnergy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FrontHoistEnergy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SpecificFrontHoistEnergy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SpecificFrontHoistEnergy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HoistEnergy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HoistEnergy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SpecificHoistEnergy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SpecificHoistEnergy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PeakDragAmps)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PeakDragAmps)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MachinePower)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MachinePower)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AcMotorEnabled)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AcMotorEnabled)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SwingTorqueMin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SwingTorqueMin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SwingTorqueMax)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SwingTorqueMax)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SwingRainfall)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SwingRainfall)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VibrationMetric)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VibrationMetric)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StressIndex)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StressIndex)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MachineGrade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MachineGrade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TargetMachineElevation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TargetMachineElevation)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.UniqueId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
