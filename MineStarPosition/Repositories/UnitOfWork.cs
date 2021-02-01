@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MineStarPosition.Models;
+using MineStarPosition.models;
 using MineStarPosition.Cores;
 
 namespace MineStarPosition.Repositories
@@ -11,13 +11,13 @@ namespace MineStarPosition.Repositories
     {
         private readonly MineWareContext _context;
         private PositionRepository _positionRepository;
-
+        private MachineRepository _machineRepository;
         public UnitOfWork(MineWareContext context) {
             _context = context;
         }
 
         public IPositionRepository Positions => _positionRepository = _positionRepository ?? new PositionRepository(_context);
-
+        public IMachineRepository Machines => _machineRepository = _machineRepository ?? new MachineRepository(_context);
         public async Task<int> CommitAsync()
         {
             return await _context.SaveChangesAsync();

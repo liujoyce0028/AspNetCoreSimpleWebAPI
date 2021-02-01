@@ -1,11 +1,10 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using MineStarPosition.Cores;
 
 #nullable disable
 
-namespace MineStarPosition.Models
+namespace MineStarPosition.models
 {
     public partial class MineWareContext : DbContext
     {
@@ -19,16 +18,16 @@ namespace MineStarPosition.Models
         }
 
         public virtual DbSet<DlCycleLog> DlCycleLogs { get; set; }
+        public virtual DbSet<MwMachine> MwMachines { get; set; }
 
-//        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//        {
-//            if (!optionsBuilder.IsConfigured)
-//            {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                
-//                optionsBuilder.UseSqlServer("Server=localhost;Database=MineWare;user id=mwadmin;password=hmipw;");
-//            }
-//        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("server=10.80.4.108; database=MineWare; User Id=mwadmin; password=hmipw;");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -236,11 +235,57 @@ namespace MineStarPosition.Models
                 entity.Property(e => e.VibrationMetric).HasColumnName("vibration_metric");
             });
 
+            modelBuilder.Entity<MwMachine>(entity =>
+            {
+                entity.HasKey(e => e.MachineId)
+                    .HasName("PK__System_Config__3B75D760");
+
+                entity.ToTable("mw_machine");
+
+                entity.HasIndex(e => e.MachineId, "IX_mw_machine_1")
+                    .HasFillFactor((byte)80);
+
+                entity.Property(e => e.MachineId)
+                    .ValueGeneratedNever()
+                    .HasColumnName("machine_id");
+
+                entity.Property(e => e.Active).HasColumnName("active");
+
+                entity.Property(e => e.IpAddress)
+                    .HasMaxLength(32)
+                    .IsUnicode(false)
+                    .HasColumnName("ip_address");
+
+                entity.Property(e => e.MachineName)
+                    .IsRequired()
+                    .HasMaxLength(16)
+                    .IsUnicode(false)
+                    .HasColumnName("machine_name");
+
+                entity.Property(e => e.MachineTypeId).HasColumnName("machine_type_id");
+
+                entity.Property(e => e.MineId).HasColumnName("mine_id");
+
+                entity.Property(e => e.RfidUniqueId)
+                    .HasMaxLength(25)
+                    .IsUnicode(false)
+                    .HasColumnName("RfidUniqueID");
+
+                entity.Property(e => e.ShiftDurationHrs).HasColumnName("shift_duration_hrs");
+
+                entity.Property(e => e.ShiftStartTimeHr).HasColumnName("shift_start_time_hr");
+
+                entity.Property(e => e.ShiftStartTimeMin).HasColumnName("shift_start_time_min");
+
+                entity.Property(e => e.ShortCode)
+                    .HasMaxLength(7)
+                    .IsUnicode(false)
+                    .HasColumnName("short_code");
+            });
+
             OnModelCreatingPartial(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-
-        public DbSet<MineStarPosition.Cores.Position> Position { get; set; }
     }
 }

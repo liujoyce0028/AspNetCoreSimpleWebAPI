@@ -11,6 +11,10 @@ namespace MineStarPosition.Repositories
     {
         protected readonly DbContext Context;
 
+        public Repository()
+        {
+
+        }
         public Repository(DbContext context)
         {
             this.Context = context;

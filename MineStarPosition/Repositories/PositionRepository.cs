@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MineStarPosition.Cores;
-using MineStarPosition.Models;
+using MineStarPosition.models;
 
 namespace MineStarPosition.Repositories
 {
@@ -17,29 +17,13 @@ namespace MineStarPosition.Repositories
         }
         public async Task<IEnumerable<Position>> GetCurrentListAsync()
         {
-            //            public int Id { get; set; }
-            //public DateTime TimeStamp { get; set; }
-
-            //public int? OriginatorId { get; set; }
-
-            //public string MachineName { get; set; }
-
-            //public double? Eastings { get; set; }
-
-            //public double? Northings { get; set; }
-
-            //public double? Elevation { get; set; }
-
-            //public double? Heading { get; set; }
-
-            //public double? Speed { get; set; }
             Random rnd = new Random();
 
             var list = await _context.DlCycleLogs.Where(c => c.StartTimeStamp >= DateTime.Today).Select(
                     a => new Position {
                         Id = a.UniqueId,
                         TimeStamp = a.StartTimeStamp,
-                        OriginatorId = 999,
+                        OriginatorId = a.MachineId,
                         MachineName = "TestDozer",
                         Eastings = a.TubEastings + rnd.Next(-100, 100),
                         Northings = a.TubNorthings + rnd.Next(-100, 100),
@@ -52,5 +36,7 @@ namespace MineStarPosition.Repositories
 
             return  list;
         }
+
+
     }
 }

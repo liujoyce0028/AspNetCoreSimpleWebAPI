@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MineStarPosition.Cores;
 
 namespace MineStarPosition.Repositories
 {
-  public  interface IUnitOfWork:IDisposable
+    public interface IMachineRepository: IRepository<Machine>
     {
-        IPositionRepository Positions { get; }
-        IMachineRepository Machines { get; }
+        Task<IEnumerable<Machine>> GetCurrentListAsync();
     }
 }
