@@ -14,9 +14,9 @@ namespace MineStarPosition.Cores
 
         public string MachineName { get; set; }
 
-        public double? Eastings { get; set; }
+        public double? Easting { get; set; }
 
-        public double? Northings { get; set; }
+        public double? Northing { get; set; }
 
         public double? Elevation { get; set; }
 

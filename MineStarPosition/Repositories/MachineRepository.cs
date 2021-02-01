@@ -20,23 +20,6 @@ namespace MineStarPosition.Repositories
         {
             Random rnd = new Random();
 
-            //--
-
-            //public int OriginatorId { get; set; }
-
-            //public int Handle { get; set; }
-
-            //public string MachineName { get; set; }
-            //public string MachineCategory { get; set; }
-            //public string Status { get; set; }
-
-            //public string MachineMaker { get; set; }
-            //public double MachineLength { get; set; }
-
-            //public double MachineWidth { get; set; }
-
-            //public double MachineHeight { get; set; }
-            //--
 
             var list = await _context.MwMachines.Select(
                         a => new Machine
@@ -47,7 +30,7 @@ namespace MineStarPosition.Repositories
                             MachineCategory = a.MachineTypeId.ToString(),
                             MachineHeight = 10,
                             MachineLength=10,
-                            MachineMaker="Caterpillar",
+                            MachineMake="Caterpillar",
                             Status="0",
                             MachineModel="D11T"
                         }

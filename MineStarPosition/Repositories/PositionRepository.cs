@@ -25,8 +25,8 @@ namespace MineStarPosition.Repositories
                         TimeStamp = a.StartTimeStamp,
                         OriginatorId = a.MachineId,
                         MachineName = "TestDozer",
-                        Eastings = a.TubEastings + rnd.Next(-100, 100),
-                        Northings = a.TubNorthings + rnd.Next(-100, 100),
+                        Easting= a.TubEastings + rnd.Next(-100, 100),
+                        Northing = a.TubNorthings + rnd.Next(-100, 100),
                         Elevation = a.TubAltitude + rnd.Next(-100, 100),
                         Heading = a.DumpHeading,
                         Speed = a.ReturnTime

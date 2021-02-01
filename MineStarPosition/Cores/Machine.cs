@@ -8,7 +8,7 @@ namespace MineStarPosition.Cores
     public class Machine
     {
         public int Id { get; set; }
-        public DateTime TimeStampUTC { get; set; }
+        public DateTime TimeStamp { get; set; }
 
         public int OriginatorId { get; set; }
 
@@ -20,7 +20,9 @@ namespace MineStarPosition.Cores
 
         public string MachineModel { get; set; }
 
-        public string MachineMaker { get; set; }
+        public string MachineMake { get; set; }
+
+
         public double MachineLength { get; set; }
 
         public double MachineWidth { get; set; }
