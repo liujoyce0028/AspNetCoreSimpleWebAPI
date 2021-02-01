@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MineStarPosition.Cores;
-using MineStarPosition.models;
+using MineStarPosition.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace MineStarPosition.Repositories

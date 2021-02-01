@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace MineStarPosition.models
+namespace MineStarPosition.Models
 {
     public partial class MwMachine
     {

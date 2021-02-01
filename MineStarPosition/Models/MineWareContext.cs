@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace MineStarPosition.models
+namespace MineStarPosition.Models
 {
     public partial class MineWareContext : DbContext
     {
@@ -20,14 +20,7 @@ namespace MineStarPosition.models
         public virtual DbSet<DlCycleLog> DlCycleLogs { get; set; }
         public virtual DbSet<MwMachine> MwMachines { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("server=10.80.4.108; database=MineWare; User Id=mwadmin; password=hmipw;");
-            }
-        }
+      
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

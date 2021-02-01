@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MineStarPosition.Cores;
-using MineStarPosition.models;
+using MineStarPosition.Models;
 
 namespace MineStarPosition.Repositories
 {
